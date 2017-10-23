@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+    <title>Aequilibrium - the castle company</title>
+    <script src="js/transformers.js"></script>
+</head>
+<body>
+    <!-- Reference the application level controller for the title model. -->
+        <h1>Aequilibrium - the transformation company</h1>
+        <div id="fightResults"></div>
+        <script>
+            var transformersArray = [];
+            
+            /*
+              format for Transformer Object for quick reference:
+              Transformer(transformerType, name, strength, intelligence, speed, endurance, rank, courage, firePower, skill)
+              transformerType should be 'A' for autobots or 'D' for decepticons
+              name should be a string
+              strength, intelligence, speed, endurance, rank, courage, firePower, skill should be a number between 1 - 10
+            */
+            
+            //Covers all cases except for the automatic game end 
+            
+            /*
+            transformersArray.push(new Transformer('D', 'Predaking', 3, 2, 6, 7, 10, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'WheelJack', 3, 2, 6, 7, 10, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'StarScream', 9, 4, 6, 7, 9, 8, 1, 2));
+            transformersArray.push(new Transformer('A', 'Bumblebee', 3, 4, 6, 7, 9, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'Goomba', 9, 3, 6, 7, 8, 8, 1, 2));
+            transformersArray.push(new Transformer('A', 'Koopa', 7, 4, 6, 7, 7, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'Mario', 3, 4, 6, 7, 6, 4, 3, 6));
+            transformersArray.push(new Transformer('A', 'Luigi', 3, 5, 6, 7, 5, 4, 3, 2));           
+            transformersArray.push(new Transformer('D', 'Zelda', 3, 4, 6, 7, 4, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'Link', 3, 5, 6, 7, 4, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'Yoshi', 1, 5, 7, 8, 3, 4, 9, 2));
+            transformersArray.push(new Transformer('A', 'Wario', 5, 1, 8, 7, 2, 4, 9, 2));
+            transformersArray.push(new Transformer('D', 'BenchWarmer', 1, 5, 7, 8, 2, 4, 9, 2));
+            transformersArray.push(new Transformer('D', 'NoGood', 1, 5, 7, 8, 1, 4, 9, 2));
+            */
+            
+            //Reverse the teams to make sure it works on both teams, Also change the order around to check the rank sorting.
+            
+            
+            transformersArray.push(new Transformer('D', 'WheelJack', 3, 2, 6, 7, 10, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'Mario', 3, 4, 6, 7, 6, 4, 3, 6));
+            transformersArray.push(new Transformer('A', 'Zelda', 3, 4, 6, 7, 4, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'Luigi', 3, 5, 6, 7, 5, 4, 3, 2)); 
+            transformersArray.push(new Transformer('A', 'StarScream', 9, 4, 6, 7, 9, 8, 1, 2));
+            transformersArray.push(new Transformer('A', 'BenchWarmer', 1, 5, 7, 8, 2, 4, 9, 2));
+            transformersArray.push(new Transformer('D', 'Bumblebee', 3, 4, 6, 7, 9, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'Goomba', 9, 3, 6, 7, 8, 8, 1, 2));
+            transformersArray.push(new Transformer('D', 'Koopa', 7, 4, 6, 7, 7, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'NoGood', 1, 5, 7, 8, 1, 4, 9, 2));         
+            transformersArray.push(new Transformer('D', 'Link', 3, 5, 6, 7, 4, 4, 3, 2));        
+            transformersArray.push(new Transformer('A', 'Yoshi', 1, 5, 7, 8, 3, 4, 9, 2));
+            transformersArray.push(new Transformer('D', 'Wario', 5, 1, 8, 7, 2, 4, 9, 2));
+            transformersArray.push(new Transformer('A', 'Optimus Prime', 3, 2, 6, 7, 10, 4, 3, 2));
+            
+            
+            //Test the premature ending of the battle due to special rule.
+            /*
+            transformersArray.push(new Transformer('D', 'WheelJack', 3, 2, 6, 7, 10, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'Goomba', 9, 3, 6, 7, 8, 8, 1, 2));
+            transformersArray.push(new Transformer('A', 'Optimus Prime', 3, 2, 6, 7, 5, 4, 3, 2));
+            transformersArray.push(new Transformer('D', 'Predaking', 3, 2, 6, 7, 5, 4, 3, 2));
+            transformersArray.push(new Transformer('A', 'BenchWarmer', 1, 5, 7, 8, 2, 4, 9, 2));
+            transformersArray.push(new Transformer('D', 'Link', 3, 5, 6, 7, 4, 4, 3, 2));        
+            transformersArray.push(new Transformer('A', 'Yoshi', 1, 5, 7, 8, 3, 4, 9, 2));
+            */        
+            
+            goToWar(transformersArray);
+        </script>
+        
+</body>
+</html>
